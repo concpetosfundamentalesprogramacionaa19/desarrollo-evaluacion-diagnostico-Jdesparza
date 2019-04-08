@@ -1,0 +1,55 @@
+Algoritmo sin_titulo
+	//n para el numero de autos
+	//c para el costo
+	//m para la marca
+	// or para el origen del auto
+	// v para la venta del automovil
+	Definir n Como Entero
+	Definir c,v Como Real
+	Definir m, or Como Caracter
+	
+	Escribir "Por favor ingrese la cantidad de autos"
+	Leer n
+	
+	
+	Para i<-1 Hasta n Con paso 1 Hacer
+		Escribir "--------------------------Nota-----------------------------"
+		Escribir "--- Por favor escribir la marca en minusculas            --"
+		Escribir "--- En el caso del origen del automovil escribir:        --"
+		Escribir "--- 1. Argentina                                         --"
+		Escribir "--- 2. Colombia                                          --"
+		Escribir "--- 3. Chile                                             --"
+		Escribir "--- 4. Otros                                             --"
+		Escribir "-----------------------------------------------------------"
+		Escribir "Ingrese la marca del automovil"
+		Leer m
+		Escribir "Ingrese el origen del automovil"
+		Leer or
+		Escribir "ingrese el costo del automovil"
+		Leer c
+	Finpara
+	Para i<-1 Hasta n Con Paso 1 Hacer
+		Si or == Argentina Entonces
+			imp1<-c*0.2
+			sum_imp1<-sum_imp1+imp1
+		SiNo
+			Si or == Colombia Entonces
+				imp2<-c*0.25
+				sum_imp2<-sum_imp2+imp2
+			SiNo
+				Si or == Chile Entonces
+					imp3<-c*0.3
+					sum_imp3<-sum_imp3+imp3
+				SiNo
+					Si or == Otros Entonces
+						imp4<-c*0.4
+						sum_imp4<-sum_imp4+imp4
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinPara
+	
+	sum_impT<-sum_imp1+sum_imp2+sum_imp3+sum_imp4
+	Escribir sum_impT
+FinAlgoritmo
